@@ -188,17 +188,18 @@ const FuncStudent = () => {
     setStudent(person);
   };
   return (
-    <div className="w-50 mx-auto">
+    <div className="divinput">
       <form onSubmit={addStudent}>
-        <div className="mb-3">
-          <label className="form-label " htmlFor="firstName">
-            <h4 className='.text-primary'>Firstname</h4>
+        <div className="mb">
+          <label className="label " htmlFor="firstName">
+            <h4 className='text'>Firstname</h4>
           </label>
           <input
-            className="form-control"
+            className="form"
             type="text"
             name="firstName"
             id="firstName"
+            placeholder='Firstname...'
             value={person.firstName}
             onChange={(e) =>
               setPerson({
@@ -208,41 +209,47 @@ const FuncStudent = () => {
             }
           />
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="lastName">
-            LastName
+        <div className="mb">
+          <label className="" htmlFor="lastName">
+            <h4 className='text'>LastName</h4>
           </label>
           <input
-            className="form-control"
+            className="form"
             type="text"
             name="lastName"
             id="lastName"
+            placeholder='Lastname...'
             value={person.lastName}
             onChange={(e) => setPerson({ ...person, lastName: e.target.value })}
           />
         </div>
-        <div className="mb-3">
-          <label className="form-label" htmlFor="age">
-            Age
+        <div className="mb">
+          <label className="label" htmlFor="age">
+          <h4 className='text'>Phone</h4>
           </label>
           <input
-            className="form-control"
-            type="number"
+            className="form"
+            type="text"
             name="age"
             id="age"
+            placeholder='Tel...'
             value={person.age}
             onChange={(e) => setPerson({ ...person, age: e.target.value })}
           />
         </div>
-        <button type="submit" className="btn btn-dark btn-block w-100">
-          Add student
+        <button type="submit"  className='button'>
+          Add cantact
         </button>
       </form>
-      <div className="my-5">
+      <div className="my">
         <h2>
-          {student.firstName} {student.lastName} ning {' '}
-          {student.age ? student.age : ''} telefon raqami
+          {student.firstName} {student.lastName}  {' '}
+          {student.age ? student.age : ''} 
         </h2>
+        
+          <button className='dele'>Edit</button>
+          <button className='dele'>Delete</button>
+        
       </div>
     </div>
   );

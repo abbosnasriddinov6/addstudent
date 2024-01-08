@@ -16,16 +16,15 @@ const Main = () => {
             <input type="text" placeholder='Search...' />
           </div>
           <div className='add'>
-            <button>Add student</button>
           </div>       
         </div>
         <div className='adding'>
           <div className='foiz'>
-            <div className='break'></div>
-            <div className='breakk'>
-              <Modall/>
-              {/* <FuncNumbers/> */}
+            <div className='break'>
+            <Modall/>
+
             </div>
+          
           </div>
         </div>
         <div>
